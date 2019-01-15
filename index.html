@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Student Score Prediction</title>
+    <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Student Score Predictor</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h3>Hey! This is a student score prediction website. You can predict your score through this.</h3>
+        <h4>Enter total study hour:</h4>
+        <form action="/mlmodel" method="post">
+        
+          <input type="number" step='0.01' name="comment" >
+
+          <button type="submit" id="submit" class="btn btn-primary btn-lg" name="submit" href="/mlmodel" role="button">Submit </button>
+          <!--<p><a class="btn btn-primary btn-lg" href="/mlmodel" role="button">submit &raquo;</a></p>-->
+      </div>
+    </div>
+
+<!--      <footer>
+        <p>&copy; Rishav Sen</p>
+      </footer>
+    </div> -->
+
+  </body>
+</html>
